@@ -11,6 +11,23 @@
 		function secondHighest(arr) {
 			//Write your code here
 			
+  if (arr.length < 2) {
+    return null; // Handle the case where there are not enough elements in the array.
+  }
+
+  // Sort the array in descending order
+  arr.sort(function(a, b) {
+    return b - a;
+  });
+
+  return arr[1]; // The second-highest element is at index 1 (0-based index).
+}
+
+// Example usage:
+// const arr = [12, 45, 67, 34, 9, 8, 56];
+// const result = secondHighest(arr);
+// console.log(result); // Output: 56
+
 		}
 
 		function Main() {
